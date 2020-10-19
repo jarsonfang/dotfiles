@@ -1,0 +1,38 @@
+{
+    "diagnostic.errorSign": "x>",
+
+    "coc.preferences.extensionUpdateCheck": "weekly",
+    "coc.preferences.rootPatterns": [".git", "compile_commands.json"],
+
+    "list.source.grep.defaultArgs": ["-regex"],
+    // "list.source.files.defaultOptions": ["--strict"],
+
+    // To generate compile_commands.json file:
+    // if using CMake, add '-DCMAKE_EXPORT_COMPILE_COMMANDS=ON' when configuring
+    // (or add 'set(CMAKE_EXPORT_COMPILE_COMMANDS ON)' to 'CMakeLists.txt') and
+    // copy or symlink the generated database to the root of your project.
+
+    "languageserver": {
+        "ccls": {
+            "command": "ccls",
+            "filetypes": ["c", "cpp", "objc", "objcpp"],
+            "rootPatterns": [".ccls", "compile_commands.json", ".git/"],
+            "initializationOptions": {
+                "cache": {
+                    "directory": ".ccls-cache"
+                },
+                "client": {
+                    "snippetSupport": true
+                },
+                "highlight": {
+                    "lsRanges": true
+                }
+            }
+        }
+    },
+
+    "rust-analyzer.server.path": "~/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/rust-analyzer",
+    "rust-analyzer.updates.channel": "stable", // stable or nightly
+    "rust-analyzer.rustfmt.extraArgs": [], // Additional arguments to rustfmt
+    "rust-analyzer.checkOnSave.extraArgs": [] // Extra arguments for cargo check
+}

@@ -1,0 +1,19 @@
+[user]
+	name = huangcai.fang
+	email = fanghuangcai@163.com
+[alias]
+	ci = commit
+	co = checkout
+	br = branch
+	st = status
+	au = add -u
+	ca = commit --amend
+[pull]
+	rebase = false
+[push]
+	default = simple
+[color]
+	ui = auto
+[core]
+	editor = vim
+	safecrlf = true
