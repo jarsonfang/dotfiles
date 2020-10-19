@@ -1,0 +1,14 @@
+[user]
+	name = Jarson Fang
+	email = fanghuangcai@163.com
+[alias]
+	ci = commit
+	co = checkout
+	br = branch
+	st = status
+	au = add -u
+	ca = commit --amend
+[push]
+	default = simple
+[color]
+	ui = auto
