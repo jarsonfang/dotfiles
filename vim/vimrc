@@ -51,15 +51,17 @@ call plug#begin('~/.vim/bundle')
 " if you need Vim help for vim-plug itself, register vim-plug as a plugin
 "Plug 'junegunn/vim-plug'
 
-"Plug 'tomasr/molokai'
-"Plug 'altercation/vim-colors-solarized'
+Plug 'tomasr/molokai'
+Plug 'ajmwagar/vim-deus'
+Plug 'crusoexia/vim-monokai'
+Plug 'altercation/vim-colors-solarized'
 
 Plug 'kien/ctrlp.vim'
 Plug 'mhinz/vim-grepper'
 Plug 'majutsushi/tagbar'
 Plug 'easymotion/vim-easymotion'
 
-" Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive' }
+"Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive' }
 Plug 'https://gitee.com/YouCompleteMe/YouCompleteMe.git',
             \ { 'do': 'git submodule update --init --recursive' }
 "Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
@@ -186,14 +188,20 @@ set conceallevel=2
 "    set background=dark
 "endif
 
+" set background=dark
 set background=light
 
 if &background == "light"
     let g:solarized_termcolors=256
+    " colorscheme solarized
     colorscheme solarized_my
 else
     let g:rehash256=1
+    " colorscheme molokai
     colorscheme molokai_my
+
+    " colorscheme deus
+    " colorscheme monokai
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -952,10 +960,11 @@ nmap <Leader>hr <Plug>(GitGutterUndoHunk)
 "
 set laststatus=2 " Always show the status line
 
-if &background == "light"
-    let g:airline_theme='solarized'
+if &background == "dark"
+    let g:airline_theme='deus'
+    " let g:airline_theme='molokai'
 else
-    let g:airline_theme='molokai'
+    let g:airline_theme='solarized'
 endif
 
 let g:airline_powerline_fonts=1
