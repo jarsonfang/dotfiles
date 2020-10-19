@@ -79,7 +79,8 @@ Plug 'ervandew/supertab'
 
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
 
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
@@ -601,10 +602,15 @@ let g:indentLine_leadingSpaceChar = '·'
 " Global commands
 " :NERDTree [<start-directory> | <bookmark>], help :NERDTree to see more detail
 nmap <Leader>n :NERDTree<Space>
-nmap <Leader>nt :NERDTreeToggle<CR>
+"nmap <Leader>nt :NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore=[ '\~$', '\.pyc$', '\.pyo$', '\.obj$', '\.o$', '\.so$',
             \ '\.egg$', '^\.git$', '^\.svn$', '^\.hg$' ]
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Nerdtree Tabs
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <Leader>nt <Plug>NERDTreeTabsToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERD Commenter
