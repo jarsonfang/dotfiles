@@ -64,6 +64,7 @@ $ sudo cnpm install -g neovim
 :CocInstall coc-emmet
 :CocInstall coc-cmake
 :CocInstall coc-pairs
+:CocInstall coc-lists
 :CocInstall coc-syntax
 :CocInstall coc-snippets
 :CocInstall coc-highlight
