@@ -57,6 +57,27 @@ $ sudo npm install -g cnpm --registry=https://registry.npm.taobao.org
 $ sudo cnpm install -g neovim
 ```
 
+### Install CoC extensions
+
+```
+:CocInstall coc-sh
+:CocInstall coc-emmet
+:CocInstall coc-cmake
+:CocInstall coc-pairs
+:CocInstall coc-syntax
+:CocInstall coc-snippets
+:CocInstall coc-highlight
+:CocInstall coc-css
+:CocInstall coc-xml
+:CocInstall coc-html
+:CocInstall coc-yaml
+:CocInstall coc-java
+:CocInstall coc-json
+:CocInstall coc-python
+:CocInstall coc-vimlsp
+:CocInstall coc-clangd
+```
+
 ### References
 
 [Python pip 安装与使用](https://www.runoob.com/w3cnote/python-pip-install-usage.html)
