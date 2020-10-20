@@ -1,4 +1,4 @@
-set nocompatible    " be iMproved, required
+set nocompatible    " be iMproved or for Neovim, required
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-plug (Minimalist Vim Plugin Manager)
@@ -116,6 +116,17 @@ Plug 'bronson/vim-trailing-whitespace'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Neovim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if has('nvim')
+    " let g:loaded_python_provider = 0
+    let g:python_host_prog  = '/usr/bin/python2'
+
+    " let g:loaded_python3_provider = 0
+    let g:python3_host_prog = '/usr/bin/python3'
+endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set utf8 as standard encoding
@@ -198,10 +209,10 @@ if &background == "light"
 else
     let g:rehash256=1
     " colorscheme molokai
-    colorscheme molokai_my
+    " colorscheme molokai_my
 
     " colorscheme deus
-    " colorscheme monokai
+    colorscheme monokai
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
