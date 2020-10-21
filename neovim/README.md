@@ -14,6 +14,7 @@ $ git clone https://github.com/jarsonfang/dotfiles.git
 $ mkdir -p ~/.config/nvim
 $ cd ~/.config/nvim
 $ ln -s ~/dotfiles/neovim/init.vim
+$ ln -s ~/dotfiles/neovim/coc-settings.json
 $ cd
 ```
 
@@ -82,4 +83,5 @@ $ sudo cnpm install -g neovim
 ### References
 
 [Python pip 安装与使用](https://www.runoob.com/w3cnote/python-pip-install-usage.html)
+
 [npm换源](https://www.jianshu.com/p/0deb70e6f395)
