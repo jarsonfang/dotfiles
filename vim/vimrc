@@ -103,7 +103,8 @@ Plug 'cespare/vim-toml', { 'for': 'toml' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
 
-Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
+" Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
+Plug 'jackguo380/vim-lsp-cxx-highlight'
 
 "Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'https://gitee.com/mirrors/rust-vim.git', { 'for': 'rust' }

@@ -3,5 +3,24 @@
     "coc.preferences.extensionUpdateCheck": "weekly",
     "coc.preferences.rootPatterns": [".git",".svn",".hg",".projections.json"],
     "list.source.files.defaultOptions": ["--strict"],
-    "list.source.grep.defaultArgs": ["-regex"]
+    "list.source.grep.defaultArgs": ["-regex"],
+
+    "languageserver": {
+        "ccls": {
+            "command": "ccls",
+            "filetypes": ["c", "cpp", "objc", "objcpp"],
+            "rootPatterns": [".ccls-root", "compile_commands.json", ".git/", ".hg/", ".svn/"],
+            "initializationOptions": {
+                "cache": {
+                    "directory": ".ccls-cache"
+                },
+                "client": {
+                    "snippetSupport": true
+                },
+                "highlight": {
+                    "lsRanges" : true
+                }
+            }
+        }
+    }
 }

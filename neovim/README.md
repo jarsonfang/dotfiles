@@ -18,6 +18,13 @@ $ ln -s ~/dotfiles/neovim/coc-settings.json
 $ cd
 ```
 
+### Install `ccls` or `clangd`
+
+```bash
+$ sudo apt install ccls
+$ sudo apt install clangd
+```
+
 ### Python provider
 
 #### Install pip
@@ -62,7 +69,6 @@ $ sudo cnpm install -g neovim
 
 ```
 :CocInstall coc-sh
-:CocInstall coc-emmet
 :CocInstall coc-cmake
 :CocInstall coc-pairs
 :CocInstall coc-lists
@@ -77,7 +83,6 @@ $ sudo cnpm install -g neovim
 :CocInstall coc-json
 :CocInstall coc-python
 :CocInstall coc-vimlsp
-:CocInstall coc-clangd
 ```
 
 ### References
