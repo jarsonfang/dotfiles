@@ -5,6 +5,11 @@
     // "list.source.files.defaultOptions": ["--strict"],
     "list.source.grep.defaultArgs": ["-regex"],
 
+    // To generate compile_commands.json file:
+    // if using CMake, add '-DCMAKE_EXPORT_COMPILE_COMMANDS=ON' when configuring
+    // (or add 'set(CMAKE_EXPORT_COMPILE_COMMANDS ON)' to 'CMakeLists.txt') and
+    // copy or symlink the generated database to the root of your project.
+
     "languageserver": {
         "ccls": {
             "command": "ccls",

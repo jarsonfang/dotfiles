@@ -86,14 +86,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'kien/ctrlp.vim'
-"Plug 'dyng/ctrlsf.vim'
-" Plug 'mhinz/vim-grepper'
-"Plug 'terryma/vim-multiple-cursors'
 
-" Plug 'ervandew/supertab'
-" Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-" Plug 'scrooloose/syntastic'
 
 " Plug 'elzr/vim-json', { 'for': 'json' }
 " Plug 'kevinoid/vim-jsonc', { 'for': 'jsonc' }
@@ -107,18 +101,13 @@ Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
 Plug 'jackguo380/vim-lsp-cxx-highlight'
 
 "Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-Plug 'https://gitee.com/mirrors/rust-vim.git', { 'for': 'rust' }
+" Plug 'https://gitee.com/mirrors/rust-vim.git', { 'for': 'rust' }
 
 "Plug 'klen/python-mode', { 'for': 'python' }
 "Plug 'https://gitee.com/mirrors/python-mode.git',
 "            \ { 'branch': 'develop', 'for': 'python' }
 
-"Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-"Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive' }
-"Plug 'https://gitee.com/YouCompleteMe/YouCompleteMe.git',
-"            \ { 'do': 'git submodule update --init --recursive' }
-
-" CoC(Conquer of Completion): Use release branch (recommend)
+" CoC(Conquer of Completion)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Initialize plugin system
@@ -947,104 +936,6 @@ let g:ctrlp_custom_ignore = {
 
 " mappings inside CtrlP's prompt, see :help ctrlp_prompt_mappings
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" CtrlSF
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Manual (see :help ctrlsf)
-"
-" Options (see :help ctrlsf-options)
-let g:ctrlsf_default_root = 'project+fw'
-
-" Key Maps (see :help ctrlsf-keymaps)
-nmap <Leader>sf <Plug>CtrlSFPrompt<C-R>=expand("<cword>")<CR>
-vmap <Leader>sf <Plug>CtrlSFVwordPath
-nmap <Leader>sn <Plug>CtrlSFCwordPath
-nmap <Leader>sN <Plug>CtrlSFCCwordPath
-nmap <Leader>sp <Plug>CtrlSFPwordPath
-nnoremap <Leader>so :CtrlSFOpen<CR>
-nnoremap <Leader>st :CtrlSFToggle<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Grepper
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Manual (see :help grepper)
-"
-" for browsing the input history
-cnoremap <C-N> <Down>
-cnoremap <C-P> <Up>
-
-nnoremap <Leader>g :Grepper -tool git -cword<CR>
-nnoremap <Leader>G :Grepper -tool ag -cword<CR>
-"nnoremap <Leader>* :Grepper -tool ag -cword -noprompt<cr>
-nnoremap <Leader># :Grepper -tool ag -cword -noprompt<cr>
-" see https://github.com/ggreer/the_silver_searcher for more about ag
-
-let g:grepper = {
-            \ 'tools': ['git', 'ag', 'grep'],
-            \ 'next_tool': '<Leader>g',
-            \ }
-
-" git grep from the root directory
-let g:grepper.git =
-            \ { 'grepprg': 'git grep -nI $* -- `git rev-parse --show-toplevel`' }
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim-multiple-cursors
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Manual (see :help multiple-cursors)
-"
-" Global Options (see :help multiple-cursors-global-options)
-let g:multi_cursor_exit_from_visual_mode=0
-let g:multi_cursor_exit_from_insert_mode=0
-
-" Mappings (see :help multiple-cursors-mappings)
-" *g:multi_cursor_next_key* (Default: '<C-n>')
-" *g:multi_cursor_prev_key* (Default: '<C-p>')
-" *g:multi_cursor_skip_key* (Default: '<C-x>')
-" *g:multi_cursor_quit_key* (Default: '<Esc>')
-" *g:multi_cursor_start_key* (Default: 'g:multi_cursor_next_key')
-
-" Map start key separately from next key
-let g:multi_cursor_start_key='<C-a>'
-
-" Add multiple cursors using a regular expression
-nmap <Leader>cf :MultipleCursorsFind <C-R>=expand("<cword>")<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" SuperTab
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Manual (see :help supertab)
-"
-" make YCM compatible with Ultisnips
-let g:SuperTabDefaultCompletionType = 'context'
-let g:SuperTabContextDefaultCompletionType = '<C-N>'
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Ultisnips
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Manual (see :help UltiSnips)
-"
-let g:UltiSnipsExpandTrigger       = '<TAB>'
-let g:UltiSnipsJumpForwardTrigger  = '<TAB>'
-let g:UltiSnipsJumpBackwardTrigger = '<S-TAB>'
-let g:UltiSnipsSnippetDirectories =
-            \ ["~/.vim/snippets", "~/.vim/bundle/vim-snippets/UltiSnips"]
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Syntastic
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Manual (see :help syntastic and :help syntastic-checkers)
-"
-let g:syntastic_error_symbol = '✗>'
-let g:syntastic_warning_symbol = '*>'
-let g:syntastic_python_checkers=['pyflakes', 'pep8']
-
-let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libstdc++'
-let g:syntastic_cpp_check_header = 1
-let g:syntastic_cpp_remove_include_errors = 1
-let g:syntastic_cpp_include_dirs = ['/usr/include/']
-let g:syntastic_enable_balloons = 1 "whether to show balloons
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-markdown
@@ -1142,59 +1033,6 @@ let g:pymode_python = 'python3'
 " let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe']
 "
 " Values may be chosen from: `pylint`, `pep8`, `mccabe`, `pep257`, `pyflakes`.
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" YouCompleteMe
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Manual (see :help youcompleteme)
-"
-set completeopt=longest,menu
-
-" let g:ycm_rust_src_path = '/usr/local/src/rust/src'
-let g:ycm_server_python_interpreter = 'python3'
-
-let g:ycm_complete_in_comments = 1
-let g:ycm_collect_identifiers_from_tags_files = 1
-"let g:ycm_key_invoke_completion = '<C-Space>' " Default
-"let g:ycm_key_detailed_diagnostics = '<Leader>d' " Default
-let g:ycm_key_list_select_completion = ['<C-N>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-P>', '<Up>']
-
-" let g:ycm_confirm_extra_conf = 1
-" let g:ycm_extra_conf_globlist = []
-let g:ycm_global_ycm_extra_conf = '~/.vim/scripts/ycm_extra_conf.py'
-
-"Note that you can install YCM with both **libclang** and **clangd** enabled.
-"In that case **clangd** will be preferred unless you have the following in your 'vimrc':
-
-" let g:ycm_use_clangd = 0
-
-"There are 2 methods which can be used to provide compile flags to clang:
-"Option 1: Use a compilation database
-"
-" The easiest way to get YCM to compile your code is to use a compilation
-" database. A compilation database is usually generated by your build system
-" (e.g. 'CMake') and contains the compiler invocation for each compilation unit
-" in your project.
-
-" For information on how to generate a compilation database, see the clang
-" documentation. In short:
-
-" - If using CMake, add '-DCMAKE_EXPORT_COMPILE_COMMANDS=ON' when configuring
-"   (or add 'set( CMAKE_EXPORT_COMPILE_COMMANDS ON )' to 'CMakeLists.txt') and
-"   copy or symlink the generated database to the root of your project.
-
-" - For other build systems, check out '.ycm_extra_conf.py' below. Note that
-"   **experimental** 'clangd'-based completer doesn't support this option. So
-"   it only applies to 'libclang'-based completer.
-
-"Option 2: Provide the flags manually
-
-nnoremap <Leader>fx :YcmCompleter FixIt<CR>
-nnoremap <Leader>gt :YcmCompleter GoTo<CR>
-nnoremap <Leader>gd :YcmCompleter GetDoc<CR>
-nnoremap <Leader>gi :YcmCompleter GoToInclude<CR>
-inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CoC (Conquer of Completion)
