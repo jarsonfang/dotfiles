@@ -14,7 +14,7 @@
         "ccls": {
             "command": "ccls",
             "filetypes": ["c", "cpp", "objc", "objcpp"],
-            "rootPatterns": [".ccls-root", "compile_commands.json", ".git/", ".hg/", ".svn/"],
+            "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/", ".svn/"],
             "initializationOptions": {
                 "cache": {
                     "directory": ".ccls-cache"
