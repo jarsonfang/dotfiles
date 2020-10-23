@@ -85,7 +85,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
-" Plug 'kien/ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 "Plug 'dyng/ctrlsf.vim'
 " Plug 'mhinz/vim-grepper'
 "Plug 'terryma/vim-multiple-cursors'
