@@ -52,9 +52,7 @@ call plug#begin('~/.vim/bundle')
 "Plug 'junegunn/vim-plug'
 
 " Color schemes
-Plug 'tomasr/molokai'
 Plug 'ajmwagar/vim-deus'
-Plug 'crusoexia/vim-monokai'
 Plug 'altercation/vim-colors-solarized'
 
 " Status line
@@ -201,16 +199,17 @@ set background=dark
 " set background=light
 
 if &background == "light"
-    let g:solarized_termcolors=256
     " colorscheme solarized
     colorscheme solarized_my
+    let g:solarized_termcolors=256
 else
-    let g:rehash256=1
-    " colorscheme molokai
-    " colorscheme molokai_my
+    set termguicolors
+
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
     colorscheme deus
-    " colorscheme monokai
+    let g:deus_termcolors=256
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
