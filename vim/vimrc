@@ -3,10 +3,6 @@ set nocompatible    " be iMproved or for Neovim, required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-plug (Minimalist Vim Plugin Manager)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Download plug.vim and put it in the 'autoload' directory.
-" curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-"     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
 " Automatic installation
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -18,58 +14,21 @@ endif
 "call plug#begin('~/.vim/plugged')
 call plug#begin('~/.vim/bundle')
 
-" Make sure you use single quotes
-
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-"Plug 'junegunn/vim-easy-align'
-
-" Any valid git URL is allowed
-"Plug 'https://github.com/junegunn/vim-github-dashboard.git'
-
-" Multiple Plug commands can be written in a single line using | separators
-"Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-
-" On-demand loading
-"Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-"Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-
-" Using a non-master branch
-"Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-
-" Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
-"Plug 'fatih/vim-go', { 'tag': '*' }
-
-" Plugin options
-"Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
-
-" Plugin outside ~/.vim/plugged with post-update hook
-"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
-" Unmanaged plugin (manually installed and updated)
-"Plug '~/my-prototype-plugin'
-
-" if you need Vim help for vim-plug itself, register vim-plug as a plugin
-"Plug 'junegunn/vim-plug'
-
-" Color schemes
 Plug 'ajmwagar/vim-deus'
 Plug 'altercation/vim-colors-solarized'
 
-" Status line
 "Plug 'edkolev/tmuxline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'Yggdroot/indentLine'
 Plug 'easymotion/vim-easymotion'
 Plug 'bronson/vim-trailing-whitespace'
 
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
 Plug 'scrooloose/nerdcommenter'
+Plug 'jistr/vim-nerdtree-tabs'
 
-Plug 'vim-scripts/a.vim'
 Plug 'vim-scripts/ShowMarks'
 Plug 'vim-scripts/Marks-Browser'
 Plug 'vim-scripts/TaskList.vim'
@@ -79,33 +38,17 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 
-" Git operation
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
+Plug 'Yggdroot/indentLine'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh'  }
 
-Plug 'honza/vim-snippets'
-
-" Plug 'elzr/vim-json', { 'for': 'json' }
-" Plug 'kevinoid/vim-jsonc', { 'for': 'jsonc' }
-" Plug 'stephpy/vim-yaml', { 'for': 'yaml' }
-Plug 'cespare/vim-toml', { 'for': 'toml' }
-
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
-Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
 
 Plug 'octol/vim-cpp-enhanced-highlight'
 " Plug 'jackguo380/vim-lsp-cxx-highlight'
 
-"Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-" Plug 'https://gitee.com/mirrors/rust-vim.git', { 'for': 'rust' }
-
-"Plug 'klen/python-mode', { 'for': 'python' }
-"Plug 'https://gitee.com/mirrors/python-mode.git',
-"            \ { 'branch': 'develop', 'for': 'python' }
-
-" CoC(Conquer of Completion)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Initialize plugin system
@@ -188,12 +131,6 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 set conceallevel=2
-
-"if has('gui_running')
-"    set background=light
-"else
-"    set background=dark
-"endif
 
 set background=dark
 " set background=light
@@ -353,9 +290,6 @@ endif
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
 map k gk
-
-" Don't use Ex mode, use Q for formatting
-map Q gq
 
 " Remap VIM 0 to first non-blank character
 "map 0 ^
@@ -738,18 +672,6 @@ map <Leader>cL <Plug>NERDCommenterAlignLeft
 "map <Leader>cB <Plug>NERDCommenterAlignBoth
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Alternate Files quickly (a.vim)
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" :A switches to the header file corresponding to the current file being edited (or vise versa)
-nmap <Leader>a :A<CR>
-" :AS splits and switches
-nmap <Leader>as :AS<CR>
-" :AV vertical splits and switches
-nmap <Leader>av :AV<CR>
-" :AT new tab and switches
-nmap <Leader>at :AT<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Showmarks
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Manual (see :help showmarks)
@@ -939,17 +861,6 @@ let g:vim_markdown_json_frontmatter = 1
 " - ':Toc': create a quickfix vertical window navigable table of contents with the headers.
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim-instant-markdown
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"let g:instant_markdown_slow = 1
-let g:instant_markdown_autostart = 0
-
-" manually trigger preview via the command :InstantMarkdownPreview.
-" the command is only available inside markdown buffers and when the autostart
-" option is turned off.
-map <Leader>md :InstantMarkdownPreview<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-cpp-enhanced-highlight
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:cpp_class_scope_highlight = 1
@@ -957,60 +868,6 @@ let g:cpp_member_variable_highlight = 1
 let g:cpp_experimental_template_highlight = 1
 let g:cpp_concepts_highlight = 1
 let c_no_curly_error=1
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" rust
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Manual (see :help rust)
-"
-"let g:rust_fold = 1
-"let g:rustfmt_autosave = 1
-"nmap <Leader>r :RustRun<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Python mode
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Manual (see :help pymode)
-"
-" Common functionality
-" --------------------
-let g:pymode_run = 0
-let g:pymode_rope = 0
-let g:pymode_folding = 0
-let g:pymode_virtualenv = 0
-let g:pymode_breakpoint = 0
-let g:pymode_lint_signs = 0
-
-let g:pymode_quickfix_minheight = 5
-let g:pymode_quickfix_maxheight = 10
-
-let g:pymode_options_colorcolumn = 1
-let g:pymode_options_max_line_length = 99
-
-"                                                       *pymode-python-version*
-" By default pymode looks for current python version supported in your Vim.
-" You could choose prefer version, but value will be tested on loading.
-"
-let g:pymode_python = 'python3'
-"
-" Values are `python`, `python3`, `disable`. If value set to `disable` most
-" python-features of **pymode** will be disabled.
-"
-" Set value to `python3` if you are working with python3 projects.
-
-"                                                        *pymode-documentation*
-" Pymode could show documentation for current word by pydoc.
-"
-" :PymodeDoc <args> — show documentation
-"
-" Bind keys to show documentation for current word (selection)
-" let g:pymode_doc_bind = 'K'
-
-" Default code checkers (you could set several)        *g:pymode_lint_checkers*
-"
-" let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe']
-"
-" Values may be chosen from: `pylint`, `pep8`, `mccabe`, `pep257`, `pyflakes`.
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CoC (Conquer of Completion)
