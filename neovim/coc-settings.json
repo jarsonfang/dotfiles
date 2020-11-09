@@ -1,9 +1,11 @@
 {
     "diagnostic.errorSign": "x>",
+
     "coc.preferences.extensionUpdateCheck": "weekly",
-    "coc.preferences.rootPatterns": [".git",".svn",".hg",".projections.json"],
-    // "list.source.files.defaultOptions": ["--strict"],
+    "coc.preferences.rootPatterns": [".git", ".svn", "compile_commands.json"],
+
     "list.source.grep.defaultArgs": ["-regex"],
+    // "list.source.files.defaultOptions": ["--strict"],
 
     // To generate compile_commands.json file:
     // if using CMake, add '-DCMAKE_EXPORT_COMPILE_COMMANDS=ON' when configuring
@@ -14,7 +16,7 @@
         "ccls": {
             "command": "ccls",
             "filetypes": ["c", "cpp", "objc", "objcpp"],
-            "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/", ".svn/"],
+            "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".svn/"],
             "initializationOptions": {
                 "cache": {
                     "directory": ".ccls-cache"

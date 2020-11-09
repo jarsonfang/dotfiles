@@ -44,6 +44,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh'  }
 
+Plug 'kevinoid/vim-jsonc', { 'for': 'jsonc' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 
 Plug 'octol/vim-cpp-enhanced-highlight'
