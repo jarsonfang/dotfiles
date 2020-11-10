@@ -1,7 +1,7 @@
 ## Install Vim:
 
 ```bash
-$ sudo apt-get install vim
+$ sudo apt install vim
 ```
 
 ## Download configuration
@@ -29,21 +29,9 @@ $ cd fonts && ./install.sh
 
 after powerline fonts installed, configure the terminal to use one of the powerline fonts.
 
-## Install dependency for `mhinz/vim-grepper`
+## Install search tools
 
 ```bash
-$ sudo apt-get install silversearcher-ag
+$ sudo apt install ripgrep silversearcher-ag universal-ctags
 ```
 
-## Install dependencies for `suan/vim-instant-markdown`
-
-```bash
-$ sudo apt-get install xdg-utils curl nodejs npm
-$ sudo npm -g install instant-markdown-d
-```
-
-## References
-
-1. http://www.cnblogs.com/zhongcq/p/3642794.html
-2. http://blog.csdn.net/fivedoumi/article/details/50594348
-3. http://easwy.com/blog/archives/advanced-vim-skills-catalog/

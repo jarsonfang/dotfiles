@@ -3,7 +3,7 @@
 ### Install neovim
 
 ```bash
-$ sudo apt-get install neovim
+$ sudo apt install neovim
 ```
 
 ### Configuration
@@ -41,6 +41,7 @@ $ pip3 --version    # Python3.x 版本命令
 如果 pip 未安装，则可以使用以下方法来安装：
 
 ```bash
+$ sudo apt install curl
 $ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py   # 下载安装脚本
 $ sudo python get-pip.py    # 运行安装脚本
 ```
@@ -61,6 +62,7 @@ $ pip3 install --user --upgrade pynvim
 ### Node.js provider
 
 ```bash
+$ sudo apt install nodejs npm
 $ sudo npm install -g cnpm --registry=https://registry.npm.taobao.org
 $ sudo cnpm install -g neovim
 ```
