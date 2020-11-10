@@ -605,7 +605,7 @@ nmap <Leader>tl :TagbarToggle<CR>
 nmap <Leader>n :NERDTree<Space>
 "nmap <Leader>nt :NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1
-let NERDTreeIgnore=[ '\~$', '\.pyc$', '\.pyo$', '\.obj$', '\.o$', '\.so$',
+let NERDTreeIgnore=[ '\~$', '\.pyc$', '\.pyo$', '\.obj$', '\.o$',
             \ '\.egg$', '^\.git$', '^\.svn$', '^\.hg$' ]
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
