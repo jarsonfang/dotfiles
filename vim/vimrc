@@ -58,6 +58,9 @@ Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 
 Plug 'octol/vim-cpp-enhanced-highlight'
 
+Plug 'python-mode/python-mode',
+            \ { 'for': 'python', 'branch': 'develop', 'do': 'git submodule update --init --recursive' }
+
 "Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive' }
 Plug 'https://gitee.com/YouCompleteMe/YouCompleteMe.git',
             \ { 'do': 'git submodule update --init --recursive' }
@@ -69,7 +72,7 @@ call plug#end()
 " Neovim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has('nvim')
-    let g:loaded_python_provider = 0
+    " let g:loaded_python_provider = 0
     let g:python_host_prog  = '/usr/bin/python2'
 
     " let g:loaded_python3_provider = 0
@@ -923,6 +926,12 @@ let g:cpp_member_variable_highlight = 1
 let g:cpp_experimental_template_highlight = 1
 let g:cpp_concepts_highlight = 1
 let c_no_curly_error=1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Python mode
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Manual (see :help pymode)
+"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " YouCompleteMe
