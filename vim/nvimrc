@@ -819,12 +819,12 @@ noremap <leader>fn :<C-U><C-R>=printf("Leaderf gtags --next %s", "")<CR><CR>
 noremap <leader>fp :<C-U><C-R>=printf("Leaderf gtags --previous %s", "")<CR><CR>
 
 let g:Lf_WildIgnore = {
-            \ 'dir': ['.svn','.git','.hg'],
+            \ 'dir': ['.svn','.git','.hg', '.ccls-cache'],
             \ 'file': ['*.sw?','~$*','*.bak','*.o','*.py[co]']
             \}
 
 let g:Lf_MruWildIgnore = {
-            \ 'dir': ['.svn','.git','.hg'],
+            \ 'dir': ['.svn','.git','.hg', '.ccls-cache'],
             \ 'file': ['*.sw?','~$*','*.bak','*.o','*.py[co]']
             \}
 

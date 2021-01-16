@@ -832,12 +832,12 @@ noremap <leader>fn :<C-U><C-R>=printf("Leaderf gtags --next %s", "")<CR><CR>
 noremap <leader>fp :<C-U><C-R>=printf("Leaderf gtags --previous %s", "")<CR><CR>
 
 let g:Lf_WildIgnore = {
-            \ 'dir': ['.svn','.git','.hg'],
+            \ 'dir': ['.svn','.git','.hg', '.ccls-cache'],
             \ 'file': ['*.sw?','~$*','*.bak','*.o','*.py[co]']
             \}
 
 let g:Lf_MruWildIgnore = {
-            \ 'dir': ['.svn','.git','.hg'],
+            \ 'dir': ['.svn','.git','.hg', '.ccls-cache'],
             \ 'file': ['*.sw?','~$*','*.bak','*.o','*.py[co]']
             \}
 
@@ -950,14 +950,14 @@ let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_key_list_select_completion = ['<C-N>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-P>', '<Up>']
 
-" let g:ycm_confirm_extra_conf = 1
+let g:ycm_confirm_extra_conf = 1
 " let g:ycm_extra_conf_globlist = []
 let g:ycm_global_ycm_extra_conf = '~/.vim/scripts/ycm_extra_conf.py'
 
 "Note that you can install YCM with both **libclang** and **clangd** enabled.
 "In that case **clangd** will be preferred unless you have the following in your 'vimrc':
 
-" let g:ycm_use_clangd = 0
+let g:ycm_use_clangd = 0
 
 "There are 2 methods which can be used to provide compile flags to clang:
 "Option 1: Use a compilation database
