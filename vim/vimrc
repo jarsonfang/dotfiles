@@ -61,9 +61,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'python-mode/python-mode',
             \ { 'for': 'python', 'branch': 'develop', 'do': 'git submodule update --init --recursive' }
 
-"Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive' }
-Plug 'https://gitee.com/YouCompleteMe/YouCompleteMe.git',
-            \ { 'do': 'git submodule update --init --recursive' }
+Plug 'ycm-core/YouCompleteMe', { 'do': 'git submodule update --init --recursive' }
 
 " Initialize plugin system
 call plug#end()
@@ -1003,7 +1001,7 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/scripts/ycm_extra_conf.py'
 "Note that you can install YCM with both **libclang** and **clangd** enabled.
 "In that case **clangd** will be preferred unless you have the following in your 'vimrc':
 
-let g:ycm_use_clangd = 0
+" let g:ycm_use_clangd = 0
 
 "There are 2 methods which can be used to provide compile flags to clang:
 "Option 1: Use a compilation database
