@@ -365,6 +365,10 @@ nmap <Leader>w :w!<CR>
 nmap <Leader>wa :wa!<CR>
 nmap <Leader>wq :wq!<CR>
 
+" Close or hide window
+nmap <Leader>h :hide<CR>
+nmap <Leader>c :close<CR>
+
 " Quit window
 nmap <Leader>q :q!<CR>
 nmap <Leader>qa :qa!<CR>
