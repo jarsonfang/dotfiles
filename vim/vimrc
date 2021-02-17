@@ -97,9 +97,11 @@ if has('nvim') || has('terminal')
     nnoremap <A-j> <C-w>j
     nnoremap <A-k> <C-w>k
     nnoremap <A-l> <C-w>l
-" Split windows:
-    nnoremap <A-=> :botright split term://$SHELL<CR>
+" Start terminal in split window:
+    " nnoremap <A-=> :botright split term://$SHELL<CR>
+    nnoremap <A-=> :botright 10split term://$SHELL<CR>
     nnoremap <A-\> :botright vsplit term://$SHELL<CR>
+    " nnoremap <A-t> :tabedit term://$SHELL<CR>
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
