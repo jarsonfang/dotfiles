@@ -1,0 +1,5 @@
+Host ubuntu-dev
+    HostName <ip address>
+    User jarson
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
