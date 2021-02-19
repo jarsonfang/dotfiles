@@ -83,7 +83,8 @@ endif
 " :h terminal_emulator.txt
 if has('nvim') || has('terminal')
 " To map <Esc> to exit terminal-mode:
-    tnoremap <Esc> <C-\><C-n>
+    " tnoremap <Esc> <C-\><C-n>
+    tnoremap <A-n> <C-\><C-n>
 " To use `ALT+{h,j,k,l}` to navigate windows from any mode:
     tnoremap <A-h> <C-\><C-N><C-w>h
     tnoremap <A-j> <C-\><C-N><C-w>j
