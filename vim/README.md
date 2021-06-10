@@ -8,8 +8,8 @@ $ sudo apt install vim
 
 ```bash
 $ cd
-$ rm -rf .vim .vimrc
 $ git clone https://github.com/jarsonfang/dotfiles.git
+$ rm -rf .vim .vimrc
 $ ln -s dotfiles/vim .vim
 $ ln -s dotfiles/vim/vimrc .vimrc
 ```

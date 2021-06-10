@@ -83,7 +83,7 @@ $ sudo cnpm install -g neovim
 :CocInstall coc-yaml
 :CocInstall coc-java
 :CocInstall coc-json
-:CocInstall coc-python
+:CocInstall coc-pyright
 :CocInstall coc-vimlsp
 ```
 

@@ -9,10 +9,11 @@
 	au = add -u
 	ca = commit --amend
 [pull]
-	rebase = false
+	rebase = true
 [push]
 	default = simple
 [color]
 	ui = auto
 [core]
 	editor = vim
+	safecrlf = true
