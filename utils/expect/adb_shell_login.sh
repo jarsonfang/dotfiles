@@ -1,18 +1,13 @@
-#!/usr/bin/expect
+#!/usr/bin/expect -f
 
-set username "user"
-set password "password"
-# set source "source /opt/ros/kinetic/setup.sh"
+set username "root"
+set password "your_password"
+set setup_env "source /opt/ros/kinetic/setup.sh"
 
 spawn adb shell
-expect "login:"
-send $username
-send "\r"
-expect "Password:"
-send $password
-send "\r"
-expect "~#"
-# send $source
-# send "\r"
+
+expect "*login*" {send "$username\r"}
+expect "*Password*" {send "$password\r"}
+expect "*root*" {send "$setup_env\r"}
 
 interact
