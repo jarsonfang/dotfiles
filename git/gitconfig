@@ -9,7 +9,7 @@
 	au = add -u
 	ca = commit --amend
 [pull]
-	rebase = true
+	rebase = false
 [push]
 	default = simple
 [color]
