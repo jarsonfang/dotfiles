@@ -17,3 +17,5 @@
 [core]
 	editor = vim
 	safecrlf = true
+[credential]
+	helper = store
