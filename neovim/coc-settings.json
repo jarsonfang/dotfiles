@@ -2,7 +2,7 @@
     "diagnostic.errorSign": "x>",
 
     "coc.preferences.extensionUpdateCheck": "weekly",
-    "coc.preferences.rootPatterns": [".git", "compile_commands.json"],
+    "coc.preferences.rootPatterns": ["compile_commands.json", ".git"],
 
     "list.source.grep.defaultArgs": ["-regex"],
     // "list.source.files.defaultOptions": ["--strict"],
@@ -16,7 +16,7 @@
         "ccls": {
             "command": "ccls",
             "filetypes": ["c", "cpp", "objc", "objcpp"],
-            "rootPatterns": [".ccls", "compile_commands.json", ".git/"],
+            "rootPatterns": ["compile_commands.json", ".ccls", ".git/"],
             "initializationOptions": {
                 "cache": {
                     "directory": ".ccls-cache"
