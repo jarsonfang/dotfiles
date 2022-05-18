@@ -28,8 +28,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'octol/vim-cpp-enhanced-highlight'
 
-Plug 'Yggdroot/LeaderF', { 'do': './install.sh'  }
-
 Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'kevinoid/vim-jsonc', { 'for': 'jsonc' }
 Plug 'stephpy/vim-yaml', { 'for': 'yaml' }
