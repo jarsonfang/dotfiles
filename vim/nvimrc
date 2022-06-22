@@ -62,10 +62,9 @@ if has('nvim') || has('terminal')
     nnoremap <A-k> <C-w>k
     nnoremap <A-l> <C-w>l
 " Start terminal in split window:
-    " nnoremap <A-=> :botright split term://$SHELL<CR>
-    nnoremap <A-=> :botright 10split term://$SHELL<CR>
+    nnoremap <A--> :botright 10split term://$SHELL<CR>
     nnoremap <A-\> :botright vsplit term://$SHELL<CR>
-    " nnoremap <A-t> :tabedit term://$SHELL<CR>
+    nnoremap <A-t> :tabedit term://$SHELL<CR>
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
