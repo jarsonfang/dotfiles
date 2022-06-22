@@ -84,7 +84,7 @@ $ sudo cnpm install -g neovim
 :CocInstall coc-toml
 :CocInstall coc-cmake
 :CocInstall coc-vimlsp
-:CocInstall coc-clangd
+:CocInstall coc-pyright
 :CocInstall coc-rust-analyzer
 ```
 
