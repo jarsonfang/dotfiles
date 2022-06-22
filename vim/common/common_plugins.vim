@@ -26,7 +26,6 @@ Plug 'Yggdroot/indentLine'
 
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'octol/vim-cpp-enhanced-highlight'
 
 Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'kevinoid/vim-jsonc', { 'for': 'jsonc' }

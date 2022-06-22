@@ -17,6 +17,7 @@ call plug#begin('~/.vim/bundle')
 source ~/.vim/common/common_plugins.vim
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'jackguo380/vim-lsp-cxx-highlight'
 
 " Initialize plugin system
 call plug#end()
