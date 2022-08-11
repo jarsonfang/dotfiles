@@ -121,13 +121,15 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gt <Plug>(coc-type-definition)
+" nmap <silent> gt <Plug>(coc-type-definition)
+nmap <silent> gt <Plug>(coc-declaration)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " use keymaps of vim
 nmap <Leader> gd <Plug>(coc-definition)
-nmap <Leader> gt <Plug>(coc-type-definition)
+" nmap <Leader> gt <Plug>(coc-type-definition)
+nmap <Leader> gt <Plug>(coc-declaration)
 nmap <Leader> gr <Plug>(coc-references)
 nmap <Leader> gi <Plug>(coc-implementation)
 
