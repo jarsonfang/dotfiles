@@ -1,0 +1,185 @@
+{
+    "workbench.startupEditor": "none",
+    "editor.renderWhitespace": "trailing",
+    "editor.gotoLocation.alternativeImplementationCommand": "editor.action.goToImplementation",
+    "editor.gotoLocation.alternativeReferenceCommand": "editor.action.goToReferences",
+    "editor.rulers": [ 80, 100, 120 ],
+    "editor.minimap.enabled": false,
+    "editor.fontSize": 16,
+    "editor.lineNumbers": "on",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 3000,
+    "files.trimTrailingWhitespace": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "C_Cpp.default.cStandard": "c99",
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.intelliSenseMode": "linux-gcc-x64",
+    "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
+    "C_Cpp.inlayHints.autoDeclarationTypes.showOnLeft": true,
+    "C_Cpp.vcFormat.indent.namespaceContents": false,
+    "cmake.showOptionsMovedNotification": false,
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "remote.SSH.remotePlatform": {
+        "DevelopServer": "linux"
+    },
+    "vim.leader": ",",
+    "vim.hlsearch": true,
+    "vim.easymotion": true,
+    "vim.showMarksInGutter": true,
+    "vim.useSystemClipboard": true,
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["<leader>", "w"],
+            "after": [":", "w", "<cr>"]
+        },
+        {
+            "before": ["<leader>", "w", "a"],
+            "after": [":", "w", "a", "<cr>"]
+        },
+        {
+            "before": ["<leader>", "q"],
+            "after": [":", "q", "!", "<cr>"]
+        },
+        {
+            "before": ["<leader>", "q", "a"],
+            "after": [":", "q", "a", "!", "<cr>"]
+        },
+        {
+            "before": ["<leader>", "e"],
+            "after": [":", "e", "d", "i", "t", "<space>"]
+        },
+        {
+            "before": ["<leader>", "c"],
+            "after": [":", "c", "l", "o", "s", "e", "<cr>"]
+        },
+        {
+            "before": ["<leader>", "b", "d"],
+            "after": [":", "b", "d", "e", "l", "e", "t", "<cr>"]
+        },
+        {
+            "before": ["<leader>", "h", "s"],
+            "after": [":", "s", "p", "l", "i", "t", "<cr>"]
+        },
+        {
+            "before": ["<leader>", "v", "s"],
+            "after": [":", "v", "s", "p", "l", "i", "t", "<cr>"]
+        },
+        {
+            "before": ["<leader>", "t", "a"],
+            "after": [":", "t", "a", "b", "n", "e", "w", "<cr>"]
+        },
+        {
+            "before": ["<leader>", "t", "n"],
+            "after": [":", "t", "a", "b", "n", "e", "x", "t", "<cr>"]
+        },
+        {
+            "before": ["<C-n>"],
+            "after": [":", "t", "a", "b", "n", "e", "x", "t", "<cr>"]
+        },
+        {
+            "before": ["<leader>", "t", "p"],
+            "after": [":", "t", "a", "b", "p", "r", "e", "v", "<cr>"]
+        },
+        {
+            "before": ["<C-p>"],
+            "after": [":", "t", "a", "b", "p", "r", "e", "v", "<cr>"]
+        },
+        {
+            "before": ["<leader>", "t", "o"],
+            "after": [":", "t", "a", "b", "o", "n", "l", "y", "<cr>"]
+        },
+        {
+            "before": ["<leader>", "t", "c"],
+            "after": [":", "t", "a", "b", "c", "l", "o", "s", "e", "<cr>"]
+        },
+        {
+            "before": ["w", "h"],
+            "after": ["<C-w>", "h"]
+        },
+        {
+            "before": ["w", "j"],
+            "after": ["<C-w>", "j"]
+        },
+        {
+            "before": ["w", "k"],
+            "after": ["<C-w>", "k"]
+        },
+        {
+            "before": ["w", "l"],
+            "after": ["<C-w>", "l"]
+        },
+        {
+            "before": ["<C-h>"],
+            "after": ["<C-w>", "<"]
+        },
+        {
+            "before": ["<C-j>"],
+            "after": ["<C-w>", "-"]
+        },
+        {
+            "before": ["<C-k>"],
+            "after": ["<C-w>", "+"]
+        },
+        {
+            "before": ["<C-l>"],
+            "after": ["<C-w>", ">"]
+        },
+        {
+            "before": ["<leader>", "j"],
+            "after": ["<leader>", "<leader>", "j"]
+        },
+        {
+            "before": ["<leader>", "k"],
+            "after": ["<leader>", "<leader>", "k"]
+        },
+        {
+            "before": ["s"],
+            "after": ["<leader>", "<leader>", "s"]
+        },
+        {
+            "before": ["t"],
+            "after": ["<leader>", "<leader>", "<leader>", "b", "d", "t"]
+        },
+        {
+            "before": ["g", "d"],
+            "after": ["<C-]>"]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": ["s"],
+            "after": ["<leader>", "<leader>", "s"]
+        },
+        {
+            "before": ["t"],
+            "after": ["<leader>", "<leader>", "<leader>", "b", "d", "t"]
+        },
+        {
+            "before": [ ">" ],
+            "commands": [ "editor.action.indentLines" ]
+        },
+        {
+            "before": [ "<" ],
+            "commands": [ "editor.action.outdentLines" ]
+        }
+    ],
+    "vim.handleKeys": {
+        "<C-b>": false,
+        "<C-c>": false,
+        "<C-f>": false,
+        "<C-s>": false
+    },
+    "vim.statusBarColorControl": true,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#5f00af",
+        "statusBar.noFolderBackground": "#5f00af",
+        "statusBar.debuggingBackground": "#5f00af",
+        "statusBar.foreground": "#ffffff",
+        "statusBar.debuggingForeground": "#ffffff"
+    },
+    "C_Cpp.default.compileCommands": "compile_commands.json"
+}
+

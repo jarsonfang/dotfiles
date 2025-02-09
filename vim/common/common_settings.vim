@@ -98,13 +98,13 @@ set showcmd
 
 " Height of the command bar
 " Give more space for displaying messages.
-set cmdheight=2
+set cmdheight=1
 
 " Highlight the cursor line
 set cursorline
 
 " Set borderline (or reference line)
-set colorcolumn=80 " or set cc=80, use set cc= to unset the option
+set colorcolumn=80,100,120 " or set cc=80, use set cc= to unset the option
 "hi ColorColumn ctermbg=black
 
 " allow backspacing over everything in insert mode
